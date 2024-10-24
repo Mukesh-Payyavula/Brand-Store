@@ -1,0 +1,90 @@
+/* Navbar.css */
+.navbar {
+    background-color: #f8f9fa; /* Light background */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.logo {
+    height: 100px; /* Adjust logo height */
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color: #343a40; /* Dark color for toggle icon */
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 15px; /* Spacing between nav items */
+}
+
+.nav-link {
+    color: #343a40; /* Dark text color */
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #007bff; /* Primary color on hover */
+}
+
+.buttons {
+    display: flex;
+}
+
+.btn {
+    margin-left: 10px; /* Spacing between buttons */
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        display: none; /* Hide nav items on small screens */
+        flex-direction: column; /* Stack nav items */
+        width: 100%;
+    }
+
+    .navbar-collapse {
+        display: flex; /* Show items when toggled */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-nav.show {
+        display: flex; /* Show nav items when toggled */
+    }
+
+    .buttons {
+        flex-direction: column; /* Stack buttons */
+        align-items: center;
+    }
+
+    .buttons .btn {
+        margin: 5px 0; /* Adjust spacing for buttons */
+    }
+
+    .navbar-toggler {
+        display: block; /* Show toggle button */
+    }
+}
